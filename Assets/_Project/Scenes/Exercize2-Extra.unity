@@ -274,9 +274,9 @@ MonoBehaviour:
   _row: 8
   _col: 8
   _depth: 8
-  _rowOffset: 1.1
-  _colOffset: 1.1
-  _depthOffset: 1.1
+  _offsetX: 1.1
+  _offsetY: 1.1
+  _offsetZ: 1.1
   _startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &989572965
 Transform:

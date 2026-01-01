@@ -19,32 +19,7 @@ public class Instantiator : MonoBehaviour
                 {
                     Vector3 position = _startPosition + new Vector3(x * _offsetX, y * _offsetY, z * _offsetZ);
 
-                    if (x == 0)
-                    {
-                        GameObject cubematrix = Instantiate(CubePrefab, transform);
-                        cubematrix.transform.position = position;
-                    }
-                    if (y == 0)
-                    {
-                        GameObject cubematrix = Instantiate(CubePrefab, transform);
-                        cubematrix.transform.position = position;
-                    }
-                    if (z == 0)
-                    {
-                        GameObject cubematrix = Instantiate(CubePrefab, transform);
-                        cubematrix.transform.position = position;
-                    }
-                    if (x == _row-1)
-                    {
-                        GameObject cubematrix = Instantiate(CubePrefab, transform);
-                        cubematrix.transform.position = position;
-                    }
-                    if (y == _col-1)
-                    {
-                        GameObject cubematrix = Instantiate(CubePrefab, transform);
-                        cubematrix.transform.position = position;
-                    }
-                    if (z == _depth-1)
+                    if (x == 0 || y==0 || z==0 || x==_row-1 || y==_col-1 || z==_depth-1)
                     {
                         GameObject cubematrix = Instantiate(CubePrefab, transform);
                         cubematrix.transform.position = position;
