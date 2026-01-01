@@ -5,7 +5,7 @@ public class Instantiator : MonoBehaviour
     [SerializeField] private GameObject CubePrefab;
 
     [SerializeField] private int _row, _col, _depth;
-    [SerializeField] private float _rowOffset, _colOffset, _depthOffset;
+    [SerializeField] private float _offsetX, _offsetY, _offsetZ;
 
     [SerializeField] private Vector3 _startPosition;
 
@@ -17,7 +17,7 @@ public class Instantiator : MonoBehaviour
             {
                 for (int z = 0; z < _depth; z++)
                 {
-                    Vector3 position = _startPosition + new Vector3(x * _rowOffset, y * _colOffset, z * _depthOffset);
+                    Vector3 position = _startPosition + new Vector3(x * _offsetX, y * _offsetY, z * _offsetZ);
 
                     if (x == 0)
                     {
