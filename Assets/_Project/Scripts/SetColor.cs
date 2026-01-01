@@ -6,7 +6,6 @@ public class SetColor : MonoBehaviour
     [SerializeField] private float _maxDistance = 100f;
     [SerializeField] private ColorManager _cm;
 
-    private MeshRenderer _mr;
     private Camera _mc;
     private Ray _ray;
 
@@ -14,7 +13,6 @@ public class SetColor : MonoBehaviour
 
     private void Awake()
     {
-        _mr = GetComponentInParent<MeshRenderer>();
         _cm = FindAnyObjectByType<ColorManager>();
         _mc = Camera.main;
 
@@ -47,7 +45,7 @@ public class SetColor : MonoBehaviour
 
             if (Physics.Raycast(start, direction, out RaycastHit hit, _maxDistance, _layerMask))
             {
-                Renderer _hitRenderer = hit.collider.GetComponentInParent<Renderer>();
+                MeshRenderer _hitRenderer = hit.collider.GetComponentInParent<MeshRenderer>();
                 _hitRenderer.material.color = _cm.currentColor;
             }
         }
@@ -60,7 +58,7 @@ public class SetColor : MonoBehaviour
 
             if (Physics.Raycast(start, direction, out RaycastHit hit, _maxDistance, _layerMask))
             {
-                Renderer _hitRenderer = hit.collider.GetComponentInParent<Renderer>();
+                MeshRenderer _hitRenderer = hit.collider.GetComponentInParent<MeshRenderer>();
                 _hitRenderer.material.SetColor("_BaseColor", Color.gray);
             }
         }
