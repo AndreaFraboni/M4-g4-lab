@@ -153,9 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CubePrefab: {fileID: 8464067794642746109, guid: 38ae17144f5e6c54fa0033413a2e2047,
     type: 3}
-  _row: 8
-  _col: 8
-  _depth: 8
+  _cubesize: 8
   _spacing: 1.1
   _startPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &591395167
