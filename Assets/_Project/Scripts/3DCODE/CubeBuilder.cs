@@ -9,6 +9,11 @@ public class CubeBuilder : MonoBehaviour
 
     [SerializeField] private Vector3 _startPosition;
 
+    private void Awake()
+    {
+        _startPosition = transform.position;
+    }
+
     private void Start()
     {
         float startX = _startPosition.x - (_cubesize / 2);
